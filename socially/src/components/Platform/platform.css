@@ -6,3 +6,25 @@
     align-items: center;
     height: 5rem;
 }
+
+.platform-choose button{
+    background: none;
+    cursor: pointer;
+    transform: translateX(1rem);
+    transition: transform 0.2s ease-in-out;
+    border: none;
+    outline: none;
+}
+
+.platform-button-yt:focus, .platform-button-yt:hover{
+    background-color: #ffd2cf;
+}
+
+.platform-button-tw:focus, .platform-button-tw:hover{
+    background-color: #cff2ff;
+}
+
+.platform-button-ig:focus, .platform-button-ig:hover{
+    background-color: #efcfff;
+}
+
