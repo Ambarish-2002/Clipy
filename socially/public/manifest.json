@@ -1,0 +1,13 @@
+{
+    "manifest_version": 3,
+    "name": "Socially - Always trending",
+    "version": "1.0.0",
+    "description": "Always be upto date with the latest trends on social media.",
+    "action": {
+      "default_popup": "index.html"
+    },
+    "permissions": [
+      "storage",
+      "activeTab"
+    ]
+  }
