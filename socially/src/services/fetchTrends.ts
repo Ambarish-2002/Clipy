@@ -1,6 +1,6 @@
-const ytToken = 'AIzaSyCecMImLnYPOw70atMBNA6ulHKrPNwTdgw';
-const igToken = '';
-const twToken = '';
+const ytToken = process.env.ytToken;
+const igToken = process.env.igToken;
+const twToken = process.env.twToken;
 
 export function fetchYtTrends() {
     const url = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet,contentDetails,statistics&chart=mostPopular&regionCode=US&key=${ytToken}`;
