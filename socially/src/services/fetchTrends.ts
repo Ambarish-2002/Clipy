@@ -1,7 +1,7 @@
 import axios from 'axios';
-const ytToken = 'AIzaSyBaj7nespvun0vAR9mG2Xzt9d_RB1N6M4o';
-const igToken = 'AIzaSyBaj7nespvun0vAR9mG2Xzt9d_RB1N6M4o';
-const twToken = 'AIzaSyBaj7nespvun0vAR9mG2Xzt9d_RB1N6M4o';
+const ytToken = '';
+const igToken = '';
+const twToken = '';
 
 export function fetchYtTrends() {
     const url = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet,contentDetails,statistics&chart=mostPopular&regionCode=US&key=${ytToken}`;
