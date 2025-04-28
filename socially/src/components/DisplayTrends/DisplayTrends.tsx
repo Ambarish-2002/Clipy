@@ -6,7 +6,6 @@ import './DisplayTrends.css'
 const DisplayTrends = () => {
 
   const { platform, trendData } = useContext(PlatformContext as Context<IPlatformContext>);
-  console.log(platform, trendData);
 
   return (
     <div className="trends-container">
@@ -17,7 +16,7 @@ const DisplayTrends = () => {
             <h3>{item.title}</h3>
             <p>{item.channelTitle}</p>
             <span className={`platform-badge platform-${platform}`}>
-              {platform === 'youtube' ? 'YouTube' : platform === 'instagram' ? 'Instagram' : 'Twitter'}
+              {platform === 'youtube' ? 'YouTube' : platform === 'reddit' ? 'Reddit' : 'Twitter'}
             </span>
           </div>
         </div>

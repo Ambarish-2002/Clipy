@@ -1,4 +1,4 @@
-import { fetchYtTrends, fetchTwTrends, fetchIgTrends,  } from '../../services/fetchTrends';
+import { fetchYtTrends, fetchRtTrends,  } from '../../services/fetchTrends';
 import DisplayTrends from '../DisplayTrends/DisplayTrends';
 import { IPlatformContext } from './IPlatform';
 import './platform.css'
@@ -21,15 +21,15 @@ const Platform = () => {
     }
 
     const getIgTrends  = async () => {
-        const data = await fetchIgTrends();
+        const data = await fetchRtTrends();
         setTrendData(data);
         setPlatform('instagram');
     }
 
-    const getTwTrends  = async () => {
-        const data = await fetchTwTrends()
+    const getRtTrends  = async () => {
+        const data = await fetchRtTrends()
         setTrendData(data);
-        setPlatform('twitter');
+        setPlatform('reddit');
     }
 
   return (
@@ -41,8 +41,8 @@ const Platform = () => {
         <button className='platform-button-ig' onClick={() => getIgTrends()}>
             <img src="insta_icon.svg" alt="" width="50px" height ="50px"/>
         </button>
-        <button className='platform-button-tw' onClick={() => getTwTrends()}>
-            <img src="twitter_icon.svg" alt="" width="50px" height ="50px"/>
+        <button className='platform-button-tw' onClick={() => getRtTrends()}>
+            <img src="reddit_icon.svg" alt="" width="50px" height ="50px"/>
         </button>
         </div>
 
