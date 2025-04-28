@@ -1,5 +1,5 @@
 import axios from 'axios';
-const ytToken = 'AIzaSyBaj7nespvun0vAR9mG2Xzt9d_RB1N6M4o';
+const ytToken = '';
 // const igToken = '';
 // const twToken = '';
 
