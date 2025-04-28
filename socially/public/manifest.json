@@ -3,15 +3,22 @@
   "name": "Socially - Always trending",
   "version": "1.0.0",
   "description": "Always be upto date with the latest trends on social media.",
+  "icons": {
+  "16": "logo.png",
+  "48": "logo.png",
+  "128": "logo.png"
+  },
   "action": {
-    "default_popup": "index.html"
+    "default_popup": "index.html",
+    "default_icon": {
+    "16": "logo.png",
+    "48": "logo.png",
+    "128": "logo.png"
+  }
   },
   "permissions": [
     "storage",
     "alarms"
-  ],
-  "host_permissions": [
-    "https://*.googleapis.com/*",
-    "https://*.youtube.com/*"
   ]
+  
 }
