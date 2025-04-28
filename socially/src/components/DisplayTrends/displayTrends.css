@@ -1,0 +1,79 @@
+
+.trends-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 16px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .trend-card {
+    display: flex;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .trend-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  }
+  
+  .trend-card img {
+    width: 140px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 12px;
+  }
+  
+  .trend-card-content {
+    padding: 12px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+  }
+  
+  .trend-card-content h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin: 0 0 8px 0;
+    line-height: 1.3;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .trend-card-content p {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+  }
+  
+  .platform-badge {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 8px;
+  }
+  
+  .platform-youtube {
+    background-color: #ffece9;
+    color: #ff4e45;
+  }
+  
+  .platform-instagram {
+    background-color: #f9e9f9;
+    color: #c13584;
+  }
+  .platform-twitter {
+    background-color: #e8f5fd;
+    color: #1da1f2;
+}

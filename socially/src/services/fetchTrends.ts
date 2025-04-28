@@ -1,5 +1,5 @@
 import axios from 'axios';
-const ytToken = '';
+const ytToken = 'AIzaSyBaj7nespvun0vAR9mG2Xzt9d_RB1N6M4o';
 const igToken = '';
 const twToken = '';
 
@@ -7,8 +7,15 @@ export function fetchYtTrends() {
     const url = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet,contentDetails,statistics&chart=mostPopular&regionCode=US&key=${ytToken}`;
     return axios.get(url)
         .then((response: any) => {
-            console.log(response);
-            return response;
+            const data = response.data.items.map((item: any) => ({
+                title: item.snippet.title,
+                thumbnail: item.snippet.thumbnails.default.url,
+                channelTitle: item.snippet.channelTitle,
+                viewCount: item.statistics.viewCount,
+                publishedAt: item.snippet.publishedAt,
+                videoId: item.id,
+            }));
+            return data;
         })
         .catch((error: any) => {
             console.error('Error fetching YouTube trends:', error);
