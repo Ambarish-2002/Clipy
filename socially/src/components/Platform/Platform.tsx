@@ -2,7 +2,7 @@ import { fetchYtTrends, fetchRtTrends,  } from '../../services/fetchTrends';
 import DisplayTrends from '../DisplayTrends/DisplayTrends';
 import { IPlatformContext } from './IPlatform';
 import './platform.css'
-import { useState, createContext } from 'react';
+import { useState, createContext, useEffect } from 'react';
 
 export const PlatformContext = createContext<IPlatformContext>({
     platform: '',
@@ -11,8 +11,18 @@ export const PlatformContext = createContext<IPlatformContext>({
 
 const Platform = () => {
 
-    const [platform, setPlatform] = useState('');
+    const [platform, setPlatform] = useState('youtube');
     const [trendData, setTrendData] = useState(null);
+
+    useEffect(() => {
+        if(trendData) return;
+        const fetchData = async () => {
+            const data = await fetchYtTrends();
+            setTrendData(data);
+          };
+        
+          fetchData();
+    }, [])
 
     const getYtTrends  = async () => {
         const data = await fetchYtTrends();

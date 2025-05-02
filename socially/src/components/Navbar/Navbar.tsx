@@ -9,6 +9,11 @@ const Navbar = () => {
             </div>
             <h1>SOCIALY</h1>
         </div>
+        <div>
+          <h3>ALWAYS TRENDING! </h3>
+
+          
+        </div>
       
     </div>
   )

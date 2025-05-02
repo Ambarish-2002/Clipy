@@ -10,7 +10,9 @@ const DisplayTrends = () => {
   return (
     <div className="trends-container">
       {trendData ? trendData.map((item: any) => (
-        <div key={item.videoId} className="trend-card">
+        <div key={item.videoId} className="trend-card" 
+        onClick={() => window.open(item.url, '_blank')}
+        style={{ cursor: 'pointer' }} >
           <img src={item.thumbnail} alt={item.title} />
           <div className="trend-card-content">
             <h3>{item.title}</h3>

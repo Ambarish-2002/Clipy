@@ -1,5 +1,5 @@
 import axios from 'axios';
-const ytToken = '';
+const ytToken = 'AIzaSyC1gUHeZs7Gd9SQU2YNueV0k5i_KxjRu8A';
 // const igToken = '';
 // const twToken = '';
 
@@ -11,7 +11,7 @@ export function fetchYtTrends() {
                 title: item.snippet.title,
                 thumbnail: item.snippet.thumbnails.default.url,
                 author: item.snippet.channelTitle,
-                videoId: item.id,
+                url: `https://www.youtube.com/watch?v=${item.id}`
             }));
             return data;
         })
@@ -34,13 +34,10 @@ export function fetchRtTrends() {
             if (thumbnail === 'self' || thumbnail === 'default' || thumbnail === 'nsfw') {
                 thumbnail = null;
             }
-            if (post.data.preview && post.data.preview.images && post.data.preview.images[0]) {
-                thumbnail = post.data.preview.images[0].source.url.replace(/&amp;/g, '&');
-            }
             
             return {
                 title: post.data.title,
-                thumbnail: thumbnail,
+                thumbnail: thumbnail || 'reddit_icon.svg',
                 author: post.data.author,
                 subreddit: post.data.subreddit_name_prefixed,
                 url: `https://reddit.com${post.data.permalink}`,
